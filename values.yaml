@@ -1,0 +1,21 @@
+namespaces:
+  - name: allowed-namespace-1
+    group: group-1
+    resources:
+      memory:
+        requests:
+          memory: 500MiB
+          cpu: 100m
+        limits:
+          memory: 1GiB
+          cpu: 500m
+  - name: allowed-namespace-2
+    group: group-2
+    resources:
+      memory:
+        requests:
+          memory: 250MiB
+          cpu: 100m
+        limits:
+          memory: 1GiB
+          cpu: 300m
