@@ -1,0 +1,24 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8sdisallownamespaces
+  annotations:
+    description: Disallows unauthorized namespaces.
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sDisallowNamespaces
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8sdisallownamespaces
+        violation[{"msg": msg, "details": {}}] {
+            input.review.object.kind == "Namespace"
+            not contains(input.parameters.allowedNamespaces, input.review.object.metadata.name)
+            msg := sprintf("Namespace with name %v is not allowed.", [input.review.object.metadata.name])
+        }
+
+        contains(namespaces, namespace) {
+            namespaces[_] == namespace
+        }
