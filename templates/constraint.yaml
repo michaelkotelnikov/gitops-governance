@@ -10,4 +10,4 @@ spec:
         kinds: ["Namespace"]
   parameters:
     allowedNamespaces:
-      - allowed-namespace-1
+      {{- include "allowedNamespaces" . | nindent 6 }}
