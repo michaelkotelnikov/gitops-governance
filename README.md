@@ -67,6 +67,6 @@ An architecture diagram for the solution can be found here -
 
 The Gatekeeper policy results can be monitored by using [Prometheus](https://github.com/prometheus) or [Thanos](https://github.com/thanos-io/thanos). Metrics from Gatekeeper policies can be gathered by using the default Gatekeeper `/metrics` endpoint or by third party exporters (e.g - [opa-scorecard](https://github.com/mcelep/opa-scorecard)).
 
-Governance visualization can be created by using tools like Grafana. An example dashboard can be found [here](dashboards/dashboard.json).
+Governance visualization can be created by using tools like [Grafana](https://github.com/grafana/grafana). An example dashboard can be found [here](dashboards/dashboard.json).
 
 ![Grafana Dashboard for GitOps Governance](images/grafana-dashboard.png)
