@@ -33,7 +33,7 @@ defaultNamespaces:
 
 Based on the input from the `values` file, the chart generates the following resources -
 
-* **Namespace** - A namespace is created for each instance in the `namespaces` list.
+* **Namespace** - A namespace for each instance in the `namespaces` list.
 * **RoleBinding** - A binding between the `admin` role and the group at `namespaces[_].group` in order to allow user access to the namespace.
 * **ResourceQuota** - A quota based on `namespaces[_].resources` that limits the resource consumption by the pods in the namespace.
 * **LimitRange** - A default limit which is set for running pods in the created namespace.
