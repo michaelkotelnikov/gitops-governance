@@ -39,7 +39,7 @@ Based on the input from the `values` file, the chart generates the following res
 * **LimitRange** - A default limit which is set for running pods in the created namespace.
 * **Gatekeeper Constraint** - A gatekeeper constraint that initiates a policy violation whenever there is a namespace in the Kubernetes cluster that does not appear in the `namespaces` or `defaultNamespaces` list in the `values` file.
 
-By using the `values` file you are able to declare all namespaces for the Kubernetes environment in git, control their associated resource limits / RBAC settings and initiate a violation whenever an unmanaged namespace appears.
+By using the `values` file you are able to declare all namespaces for the Kubernetes environment in git. You can control their associated resource limits / RBAC settings and initiate a violation whenever an unmanaged namespace appears.
 
 ## Deployment
 
