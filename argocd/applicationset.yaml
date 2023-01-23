@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: namespace-management
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: ocp411-dev
+      - cluster: ocp410-dev
+  template:
+    metadata:
+      name: '{{cluster}}-namespace-management'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/michaelkotelnikov/gitops-governance.git
+        targetRevision: master
+        path: charts/gitops-governance/
+      destination:
+        name: '{{cluster}}'
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
