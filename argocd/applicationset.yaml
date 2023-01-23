@@ -4,13 +4,10 @@ metadata:
   name: namespace-management
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: ocp411-dev
-      - cluster: ocp410-dev
+  - clusters: {}
   template:
     metadata:
-      name: '{{cluster}}-namespace-management'
+      name: '{{name}}-namespace-management'
     spec:
       project: default
       source:
@@ -18,7 +15,7 @@ spec:
         targetRevision: master
         path: charts/gitops-governance/
       destination:
-        name: '{{cluster}}'
+        name: '{{server}}'
       syncPolicy:
         automated:
           prune: false
