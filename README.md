@@ -31,7 +31,7 @@ defaultNamespaces:
   - default
 ```
 
-Based on the input from the `values` file, the chart would generate the following resources -
+Based on the input from the `values` file, the chart generates the following resources -
 
 * **Namespace** - A namespace is created for each instance in the `namespaces` list.
 * **RoleBinding** - A binding between the `admin` role and the group at `namespaces[_].group` in order to allow user access to the namespace.
