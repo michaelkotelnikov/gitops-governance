@@ -47,7 +47,7 @@ The solution may be deployed by using the [Helm](https://github.com/helm/helm) b
 
 ### Using Helm
 
-To install the solution via Helm, make sure to edit the [values](charts/gitops-governance/values.yaml) file localy according to the desired state in your environment and run the next command -
+To install the solution via Helm, make sure to edit the [values](charts/gitops-governance/values.yaml) file localy. Modify the file according to the desired state in your environment. Run the next command to install the chart -
 
 ```
 $ helm install --generate-name charts/gitops-governance
