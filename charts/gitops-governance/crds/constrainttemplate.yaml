@@ -5,6 +5,7 @@ metadata:
   annotations:
     description: Disallows unauthorized namespaces.
     argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   crd:
     spec:
