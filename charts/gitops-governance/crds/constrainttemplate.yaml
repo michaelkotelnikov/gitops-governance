@@ -4,6 +4,7 @@ metadata:
   name: k8sdisallownamespaces
   annotations:
     description: Disallows unauthorized namespaces.
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   crd:
     spec:
