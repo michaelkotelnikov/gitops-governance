@@ -21,5 +21,7 @@ spec:
         server: '{{server}}'
       syncPolicy:
         automated:
-          prune: false
+          prune: true
           selfHeal: true
+        syncOptions:
+        - PrunePropagationPolicy=background
