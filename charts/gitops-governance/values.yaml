@@ -23,5 +23,5 @@ defaultNamespaces:
   - kube-node-lease                                                   
   - kube-public                                                       
   - kube-system                                                                                                 
-  - opa-exporter
+  - governance-monitoring
   - local-path-storage
