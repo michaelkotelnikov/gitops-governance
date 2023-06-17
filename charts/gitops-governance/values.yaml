@@ -25,4 +25,3 @@ defaultNamespaces:
   - kube-system                                                                                                 
   - governance-monitoring
   - local-path-storage
-  - manual-namespace
